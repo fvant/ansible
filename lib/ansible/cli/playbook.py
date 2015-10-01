@@ -66,6 +66,9 @@ class PlaybookCLI(CLI):
 
         self.parser = parser
 
+        if self.options.tags == ¨¨:
+            self.options.tags = ¨all¨
+
         if len(self.args) == 0:
             raise AnsibleOptionsError("You must specify a playbook file to run")
 
